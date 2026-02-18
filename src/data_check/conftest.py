@@ -1,3 +1,8 @@
+import os
+os.environ["WANDB_PROJECT"] = "nyc_airbnb"
+os.environ["WANDB_ENTITY"] = "udacityproject"
+os.environ["WANDB_MODE"] = "online"
+
 import pytest
 import pandas as pd
 import wandb

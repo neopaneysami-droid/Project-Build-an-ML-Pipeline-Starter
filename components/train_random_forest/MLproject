@@ -1,0 +1,16 @@
+name: train_random_forest
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+      trainval_artifact: {type: str}
+      rf_config: {type: str}
+      max_tfidf_features: {type: int}
+      output_artifact: {type: str}
+    command: >
+      python run.py \
+        --trainval_artifact {trainval_artifact} \
+        --rf_config {rf_config} \
+        --max_tfidf_features {max_tfidf_features} \
+        --output_artifact {output_artifact}
